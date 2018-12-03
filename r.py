@@ -17,7 +17,7 @@ def getWeather():
 	dayTemp = soup.find(attrs={'class':'op_weather4_twoicon_temp'}).get_text().strip()
 	dayWea = soup.find(attrs={'class':'op_weather4_twoicon_weath'}).get_text().strip()
 	dayWind = soup.find(attrs={'class':'op_weather4_twoicon_wind'}).get_text().strip()
-	dayQuailty = soup.find(attrs={'class':'op_weather4_twoicon_aqi_level_4_bg op_weather4_twoicon_realtime_quality_today'}).span.get_text().strip()
+	dayQuailty = soup.find(attrs={'class':'op_weather4_twoicon_realtime_quality_wrap'}).span.span.get_text().strip()
 	weatherReportNow = date + "\n" + tempNumber + tempSup + "  " + tempSub + "\n"
 	weatherReportDay = date + "\n" + dayTemp + "  " + dayWea + "," + dayWind + u",空气质量指数" + dayQuailty
 
