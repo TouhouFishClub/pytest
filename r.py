@@ -38,6 +38,8 @@ def getWeather(area):
 	except:
 		print('失败')
 
-
-for i in range(1, len(sys.argv)):
-	getWeather(sys.argv[i])
+if(len(sys.argv) > 1):
+	for i in range(1, len(sys.argv)):
+		getWeather(sys.argv[i])
+else:
+	getWeather('北京')
